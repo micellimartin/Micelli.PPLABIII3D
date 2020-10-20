@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="icon" href="favicon.ico?" type="image/x-icon" />
+    <script src="./js/scripts.js" type="module" defer></script>
+    <title>Primer Parcial LAB 3</title>
+</head>
+
+<body>
+    <header>
+        <img src="./img/logo.svg" alt="logo">
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">Anuncios</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="tituloPrincipal">
+        <h1>Administracion</h1>
+        <img src="./img/fotoMascotas.jpg" alt="imagen de mascotas">
+    </section>
+
+    <h2>Completa el formulario para dar de alta un anuncio</h2>
+
+    <div>
+        <fieldset>
+            <legend>Información Del Anuncio</legend>
+            <form>
+                <label>Titulo:</label>
+                <input type="text" id="txtTitulo" autocomplete="off" placeholder="Titulo"><br><br>
+
+                <label>Descripcion:</label>
+                <input type="text" id="txtDescripcion" autocomplete="off" placeholder="Descripcion"><br><br>
+
+                <label>Precio:</label>
+                <input type="text" id="txtPrecio" autocomplete="off" placeholder="Precio"><br><br>
+
+                <fieldset>
+                    <legend id="campoAnimal">Animal:</legend>
+    
+                    <label for="rdoPerro"><input type="radio" name="animal" id="rdoPerro" value="perro" checked/>PERRO</label>
+                    <br/><br/>
+    
+                    <label for="rdoGato"><input type="radio" name="animal" id="rdoGato" value="gato"/>GATO</label>
+                    <br/><br/>
+                </fieldset>
+
+                <div id="contenedorInputs">                    
+                    <img src="./img/iconoRaza.svg" alt="iconoRaza" class="icono"> 
+                    <input type="text" id="txtRaza" placeholder="Raza" autocomplete="off"><br>
+                    <img src="./img/iconoFechaNacimiento.svg" alt="iconoFechaNacimiento" class="icono"> 
+                    <input type="text" id="txtFechaNacimiento" placeholder="dd/mm/aaaa" autocomplete="off"><br>
+                    <img src="img/iconoVacuna.svg" alt="iconoVacuna" class="icono"> 
+                    <select id="cmb">
+                        <option value="">---Elegir---</option>
+                        <option value="Si">SI</option>
+                        <option value="No">NO</option>
+                    </select><br><br>
+                </div>
+
+            </form>
+        </fieldset>
+
+    </div>
+    
+    <div class="contenedorBotones">
+        <button class="boton" id="btnAlta"><i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i> Alta Anuncio</button>
+        <button class="boton" id="btnModificar"><i class="fa fa-scissors fa-2x" aria-hidden="true"></i> Modificar Anuncio</button>
+        <button class="boton" id="btnEliminar"><i class="fa fa-trash fa-2x" aria-hidden="true"></i> Eliminar Anuncio</button>
+        <button class="boton" id="btnCancelar"><i class="fa fa-undo fa-2x" aria-hidden="true"></i> Cancelar</button>
+    </div>
+
+    <h2>Haga click en la tabla para modificar o eliminar</h2>
+
+    <section class="contenedor">
+
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw" id="spinner"></i>
+
+        <div id="divTabla"></div>
+
+    </section>
+
+    <footer>
+        <nav>
+            <a href="#">Nosotros</a>
+            <a href="#">Anuncios</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <p>Todos los derechos reservados 2020 &copy;</p>
+
+    </footer>
+
+</body>
+</html>
